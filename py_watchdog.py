@@ -1,13 +1,16 @@
 import multiprocessing
-import time
 import os
+import time
+
 from watchdog.events import PatternMatchingEventHandler
 from watchdog.observers.polling import PollingObserver as Observer
 
 from py_config import ConfigFactory
 from py_logging import LoggerFactory
-from py_pandas import ExcelParser
-from py_tkinter import AppUI
+from py_pandas import DataFileParser
+
+
+# from py_tkinter import AppUI
 
 
 class WatchDogObServer():
@@ -15,19 +18,19 @@ class WatchDogObServer():
     def __init__(self, config, logger):
         self.config = config
         self.logger = logger
-        self.excelParser = ExcelParser(config=config, logger=logger)
+        self.parser = DataFileParser(config=config, logger=logger)
 
     def on_modified(self, event):
         self.logger.debug(event)
-        result = self.excelParser.parser(event.src_path)
-        AppUI(result)
-        self.logger.debug(result)
+        result = self.parser.startProcess1(event)
+        # AppUI(result)
+        # self.logger.debug(result)
 
     def on_created(self, event):
         self.logger.debug(event)
-        result = self.excelParser.parser(event.src_path)
+        result = self.parser.startProcess1(event)
         # AppUI(result)
-        self.logger.debug(result)
+        # self.logger.debug(result)
 
     def start(self):
         path = self.config.get('watchdog', 'path')
@@ -37,7 +40,7 @@ class WatchDogObServer():
         case_sensitive = self.config.getboolean('watchdog', 'case_sensitive')
         recursive = self.config.getboolean('watchdog', 'recursive')
 
-        event_handler = PatternMatchingEventHandler(patterns=['*'],
+        event_handler = PatternMatchingEventHandler(patterns=patterns,
                                                     ignore_patterns=ignore_patterns,
                                                     ignore_directories=ignore_directories,
                                                     case_sensitive=case_sensitive)
