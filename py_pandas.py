@@ -20,7 +20,7 @@ class ExcelParser():
         return surpacToCadDF
 
     def parser(self, surpacToExcelFileName):
-        pool = Pool(2)
+        pool = Pool(10)
         results = pool.map(self.worker, (surpacToExcelFileName,))
         return results[0]
 

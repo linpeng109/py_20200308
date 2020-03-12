@@ -13,7 +13,7 @@ class AppUI():
         # self.path = 'C:'
         root.title("数据导入工具")
         root.geometry('500x300')
-        root.update()
+        root.geometry('+40+15')
         root.resizable(False, False)  # 调用方法会禁止根窗体改变大小
         # 以下方法用来计算并设置窗体显示时，在屏幕中心居中
         curWidth = root.winfo_width()  # get current width
@@ -21,7 +21,7 @@ class AppUI():
         scnWidth, scnHeight = root.maxsize()  # get screen width and height
         tmpcnf = '+%d+%d' % ((scnWidth - curWidth) / 2, (scnHeight - curHeight) / 2)
         print(tmpcnf)
-        root.geometry('+40+15')
+        root.update()
         root.mainloop()
 
     def create_content(self, root):

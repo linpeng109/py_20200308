@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="377533f3-6fd4-4e31-b309-eea314e59e9f" name="Default Changelist" comment="" />
+    <list default="true" id="377533f3-6fd4-4e31-b309-eea314e59e9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/py_uipath2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_pandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_tkinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_tkinter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_uipath2.ini" beforeDir="false" afterPath="$PROJECT_DIR$/py_uipath2.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py_watchdog.py" beforeDir="false" afterPath="$PROJECT_DIR$/py_watchdog.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +23,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YruZByZcajb81H0zTymBCDNkPw" />
   <component name="ProjectViewState">
@@ -34,7 +44,7 @@
       <recent name="D:\Workspace\py_20200308" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.py_flask">
+  <component name="RunManager" selected="Python.py_watchdog">
     <configuration name="py_config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py_20200308" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,9 +157,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.py_flask" />
         <item itemvalue="Python.py_watchdog" />
         <item itemvalue="Python.py_tkinter" />
+        <item itemvalue="Python.py_flask" />
         <item itemvalue="Python.py_pandas" />
         <item itemvalue="Python.py_config" />
       </list>
@@ -169,6 +179,8 @@
       <workItem from="1583797894718" duration="3698000" />
       <workItem from="1583856226286" duration="2673000" />
       <workItem from="1583892122886" duration="621000" />
+      <workItem from="1583905614933" duration="1439000" />
+      <workItem from="1583969558541" duration="1690000" />
     </task>
     <servers />
   </component>
@@ -180,22 +192,22 @@
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
     <state x="-940" y="438" key="FileChooserDialogImpl/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583801344229" />
-    <state width="1397" height="144" key="GridCell.Tab.0.bottom" timestamp="1583800638034">
+    <state width="1380" height="165" key="GridCell.Tab.0.bottom" timestamp="1583971349664">
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
-    <state width="1397" height="144" key="GridCell.Tab.0.bottom/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583800638034" />
-    <state width="1397" height="144" key="GridCell.Tab.0.center" timestamp="1583800638033">
+    <state width="1380" height="165" key="GridCell.Tab.0.bottom/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583971349664" />
+    <state width="1380" height="165" key="GridCell.Tab.0.center" timestamp="1583971349664">
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
-    <state width="1397" height="144" key="GridCell.Tab.0.center/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583800638033" />
-    <state width="1397" height="144" key="GridCell.Tab.0.left" timestamp="1583800638033">
+    <state width="1380" height="165" key="GridCell.Tab.0.center/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583971349664" />
+    <state width="1380" height="165" key="GridCell.Tab.0.left" timestamp="1583971349664">
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
-    <state width="1397" height="144" key="GridCell.Tab.0.left/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583800638033" />
-    <state width="1397" height="144" key="GridCell.Tab.0.right" timestamp="1583800638033">
+    <state width="1380" height="165" key="GridCell.Tab.0.left/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583971349664" />
+    <state width="1380" height="165" key="GridCell.Tab.0.right" timestamp="1583971349664">
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
-    <state width="1397" height="144" key="GridCell.Tab.0.right/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583800638033" />
+    <state width="1380" height="165" key="GridCell.Tab.0.right/0.0.1536.824/-1440.250.1440.860@-1440.250.1440.860" timestamp="1583971349664" />
     <state x="-1217" y="325" key="SettingsEditor" timestamp="1583859988030">
       <screen x="-1440" y="250" width="1440" height="860" />
     </state>
@@ -205,8 +217,8 @@
     <SUITE FILE_PATH="coverage/py_20200308$py_config.coverage" NAME="py_config Coverage Results" MODIFIED="1583767007155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py_20200308$py_logging.coverage" NAME="py_logging Coverage Results" MODIFIED="1583766841440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py_20200308$py_flask.coverage" NAME="py_flask Coverage Results" MODIFIED="1583800638024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py_20200308$py_tkinter.coverage" NAME="py_tkinter Coverage Results" MODIFIED="1583779951494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py_20200308$py_watchdog.coverage" NAME="py_watchdog Coverage Results" MODIFIED="1583797123043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_20200308$py_tkinter.coverage" NAME="py_tkinter Coverage Results" MODIFIED="1583969833472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_20200308$py_watchdog.coverage" NAME="py_watchdog Coverage Results" MODIFIED="1583971349655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py_20200308$py_pandas.coverage" NAME="py_pandas Coverage Results" MODIFIED="1583778508112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

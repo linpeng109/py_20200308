@@ -1,0 +1,33 @@
+2020Mar12-07:49:54 root DEBUG WatchDog Observer is startting.....
+2020Mar12-07:49:54 root DEBUG patterns=['*surpacToCad*.XLSX']
+2020Mar12-07:49:54 root DEBUG path=e:\uipathdir
+2020Mar12-07:51:50 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\surpacToCad20200309.xlsx'>
+2020Mar12-07:53:28 root DEBUG                             0     1     2
+1  巴彦包勒格矿区银多金属矿5号勘查线地质剖面图_分析表  3100  1000
+2  巴彦包勒格矿区银多金属矿6号勘查线地质剖面图_分析表  2200  1000
+3  巴彦包勒格矿区银多金属矿7号勘查线地质剖面图_分析表  1700  1000
+4  巴彦包勒格矿区银多金属矿8号勘查线地质剖面图_分析表  1500  1000
+5  巴彦包勒格矿区银多金属矿9号勘查线地质剖面图_分析表  2200  1000
+2020Mar12-07:53:28 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\20200308surpacToCad.xlsx'>
+2020Mar12-07:53:35 root DEBUG                             0     1     2
+1  巴彦包勒格矿区银多金属矿0号勘查线地质剖面图_分析表  3100  1000
+2  巴彦包勒格矿区银多金属矿1号勘查线地质剖面图_分析表  2200  1000
+3  巴彦包勒格矿区银多金属矿2号勘查线地质剖面图_分析表  1700  1000
+4  巴彦包勒格矿区银多金属矿3号勘查线地质剖面图_分析表  1500  1000
+5  巴彦包勒格矿区银多金属矿4号勘查线地质剖面图_分析表  2200  1000
+2020Mar12-07:53:35 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\~$surpacToCad20200309.xlsx'>
+2020Mar12-07:54:40 root DEBUG WatchDog Observer is startting.....
+2020Mar12-07:54:40 root DEBUG patterns=['*surpacToCad*.XLSX']
+2020Mar12-07:54:40 root DEBUG path=e:\uipathdir
+2020Mar12-07:55:14 root DEBUG WatchDog Observer is startting.....
+2020Mar12-07:55:14 root DEBUG patterns=['*surpacToCad*.XLSX']
+2020Mar12-07:55:14 root DEBUG path=e:\uipathdir
+2020Mar12-07:56:51 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\20200302puid.txt'>
+2020Mar12-08:00:03 root DEBUG WatchDog Observer is startting.....
+2020Mar12-08:00:03 root DEBUG patterns=['*surpacToCad*.XLSX']
+2020Mar12-08:00:03 root DEBUG path=e:\uipathdir
+2020Mar12-08:00:15 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\20191127AAS.txt'>
+2020Mar12-08:00:46 root DEBUG WatchDog Observer is startting.....
+2020Mar12-08:00:46 root DEBUG patterns=['*surpacToCad*.XLSX']
+2020Mar12-08:00:46 root DEBUG path=e:\uipathdir
+2020Mar12-08:01:01 root DEBUG <FileCreatedEvent: src_path='e:\\uipathdir\\surpacToCad20200309.xlsx'>

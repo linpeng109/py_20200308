@@ -1,6 +1,6 @@
 import multiprocessing
 import time
-
+import os
 from watchdog.events import PatternMatchingEventHandler
 from watchdog.observers.polling import PollingObserver as Observer
 
@@ -26,7 +26,7 @@ class WatchDogObServer():
     def on_created(self, event):
         self.logger.debug(event)
         result = self.excelParser.parser(event.src_path)
-        AppUI(result)
+        # AppUI(result)
         self.logger.debug(result)
 
     def start(self):
@@ -61,7 +61,8 @@ class WatchDogObServer():
 
 
 if __name__ == '__main__':
-    multiprocessing.freeze_support()
+    if os.sys.platform.startswith('win'):
+        multiprocessing.freeze_support()
     config = ConfigFactory(config='py_uipath2.ini').getConfig()
     logger = LoggerFactory(config=config).getLogger()
     wObserver = WatchDogObServer(config=config, logger=logger)
