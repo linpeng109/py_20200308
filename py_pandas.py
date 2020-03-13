@@ -1,13 +1,12 @@
-import sys
 from multiprocessing import Pool
 from multiprocessing import Process
 
 import pandas as pd
-from py_qrcode import QRcode
 
 from py_config import ConfigFactory
 from py_logging import LoggerFactory
 from py_path import Path
+from py_qrcode import QRcode
 
 
 class DataFileParser():
@@ -39,8 +38,8 @@ class DataFileParser():
                 process = Process(target=self.puidWorker(file), args=(file,))
             process.start()
             # process.join(timeout=10000)
-        except:
-            self.logger.error(sys.exc_info()[0])
+        except(ValueError):
+            self.logger.error(ValueError.message)
             pass
 
     def startProcess2(self, event):
@@ -62,8 +61,8 @@ class DataFileParser():
             # process.start()
             # process.join(timeout=10000)
             self.logger.debug(results[0])
-        except:
-            self.logger.error(sys.exc_info()[0])
+        except (RuntimeError):
+            self.logger.error(RuntimeError.message)
             pass
 
     # ========================
@@ -86,10 +85,10 @@ class DataFileParser():
                 'na_filter': False}
         hcsDf = pd.read_csv(filepath_or_buffer=hcsTextFileName, **dict)
         hcsDf.drop(index=[0, 1], inplace=True)
-        hcsDf.sort_index(0, ascending=False, inplace=True)
+        # hcsDf.sort_index(0, ascending=False, inplace=True)
         hcsDf.dropna(axis=1, how='any', inplace=True)
         self.logger.debug(hcsDf)
-        newfilename = self.__getNewFilename(hcsTextFileName, 'hcs')
+        newfilename = self.__getNewFilename(filename=hcsTextFileName, type='hcs')
         self.logger.debug(newfilename)
         encoding = self.config.get('hcs', 'encoding')
         hcsDf.to_csv(newfilename, index=None, header=None, encoding=encoding, line_terminator='\r\n')
@@ -101,7 +100,7 @@ class DataFileParser():
         hcsDf.drop(index=[0, 1], inplace=True)  # 删除表标题
         hcsDf.dropna(axis=1, how='any', inplace=True)
         self.logger.debug(hcsDf)
-        newfilename = self.__getNewFilename(hcsExcelFileName, 'hcs')
+        newfilename = self.__getNewFilename(filename=hcsExcelFileName, type='hcs')
         encoding = self.config.get('hcs', 'encoding')
         hcsDf.to_csv(newfilename, index=None, header=None, encoding=encoding, line_terminator='\r\n')
 
@@ -110,7 +109,7 @@ class DataFileParser():
         afsDf = pd.read_excel(afsExcelFileName, **dict)
         afsDf.drop(index=[0, 1, 2], inplace=True)
         self.logger.debug(afsDf)
-        newfilename = self.__getNewFilename(afsExcelFileName, 'afs')
+        newfilename = self.__getNewFilename(filename=afsExcelFileName, type='afs')
         encoding = self.config.get('afs', 'encoding')
         afsDf.to_csv(newfilename, index=None, header=None, encoding=encoding, line_terminator='\r\n')
 
@@ -119,7 +118,7 @@ class DataFileParser():
                 'header': None, 'engine': 'python'}
         aasDf = pd.read_csv(filepath_or_buffer=aasTextFilename, encoding='gbk', **dict)
         self.logger.debug(aasDf)
-        newfilename = self.__getNewFilename(aasTextFilename, 'aas')
+        newfilename = self.__getNewFilename(filename=aasTextFilename, type='aas')
         encoding = self.config.get('aas', 'encoding')
         aasDf.to_csv(newfilename, index=None, header=None, encoding=encoding, line_terminator='\r\n')
         return aasDf
@@ -131,8 +130,8 @@ if __name__ == '__main__':
     dataFileParser = DataFileParser(config=config, logger=logger)
 
     # result = dataFileParser.puidWorker('e:\\uipathdir\\1212121puid.txt')
-    result = dataFileParser.surpacToCadDFWorker('e:\\uipathdir\\20200308surpacToCad.xlsx')
-    # result = dataFileParser.hcsTxtWorker('e:/uipathdir/20191127HCS.txt')
+    # result = dataFileParser.surpacToCadDFWorker('e:\\uipathdir\\20200308surpacToCad.xlsx')
+    result = dataFileParser.hcsTxtWorker('e:/uipathdir/20191127HCS.txt')
     print('rows=%s' % result[0].shape[0])
     print('=========')
     print('df=%s' % result)

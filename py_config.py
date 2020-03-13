@@ -1,4 +1,5 @@
 from configparser import ConfigParser
+import configparser
 
 
 class ConfigFactory():
@@ -11,6 +12,7 @@ class ConfigFactory():
 
     def getConfig(self):
         cfg = self._Configparser()
+        cfg._interpolation = configparser.ExtendedInterpolation()
         cfg.read(filenames=self.config, encoding='utf8')
         return cfg
 

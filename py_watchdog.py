@@ -51,6 +51,7 @@ class WatchDogObServer():
         observer.schedule(path=path, event_handler=event_handler, recursive=recursive)
 
         observer.start()
+
         self.logger.debug('WatchDog Observer is startting.....')
         self.logger.debug('patterns=%s' % patterns)
         self.logger.debug('path=%s' % path)
@@ -67,6 +68,9 @@ if __name__ == '__main__':
     if os.sys.platform.startswith('win'):
         multiprocessing.freeze_support()
     config = ConfigFactory(config='py_uipath2.ini').getConfig()
+    # print(os.path.basename(__file__).split('.')[0])
+    config['default']['name'] = os.path.basename(__file__).split('.')[0]
+    print(config['default']['name'])
     logger = LoggerFactory(config=config).getLogger()
     wObserver = WatchDogObServer(config=config, logger=logger)
     wObserver.start()
